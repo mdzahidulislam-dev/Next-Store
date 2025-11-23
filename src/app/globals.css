@@ -5,7 +5,11 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
+.cl-avatarBox {
+  width: 2.55rem;
+  height: 2.55rem;
 
+}
 
 body {
   font-family: Arial, Helvetica, sans-serif;
