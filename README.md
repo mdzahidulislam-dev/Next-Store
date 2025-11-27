@@ -1,36 +1,186 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🏬 Next Store
 
-## Getting Started
+A modern eCommerce web application built with **Next.js**, **MongoDB**, and **Clerk Authentication**. This project includes full user and admin features, product management, cart system, secure authentication, and a fully responsive UI.
 
-First, run the development server:
+---
+
+## ⭐ Overview
+
+Next Store is a full‑stack eCommerce application where users can browse products, add them to the cart, manage orders, and checkout. Admins can add, edit, and manage products with a dedicated backend.
+
+---
+
+## 📦 Tech Stack
+
+### **Frontend:**
+
+* Next.js (App Router)
+* React
+* Tailwind CSS
+* ShadCN UI
+* Clerk Authentication
+
+### **Backend:**
+
+* Node.js
+* Express.js
+* MongoDB (Driver & Atlas)
+
+### **Utilities:**
+
+* Axios
+* JWT (Clerk provides session)
+* Vercel Deployment
+
+---
+
+## 🛠️ Project Structure
+
+```
+Next-Store/
+├── app/
+│   ├── (routes)
+│   ├── components/
+│   ├── hooks/
+│   ├── lib/
+│   └── styles/
+├── backend/
+│   ├── routes/
+│   ├── controllers/
+│   ├── db/
+│   └── server.js
+├── public/
+├── package.json
+└── README.md
+```
+
+---
+
+## 🔐 Authentication (Clerk)
+
+* User login/signup with Clerk
+* Google & Email authentication
+* Clerk ProtectRoute & Webhooks
+* Role-based access for admin panel
+
+---
+
+## 🚀 Getting Started
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/zahidulislammahim/Next-Store.git
+cd Next-Store
+```
+
+---
+
+## ⚙️ Frontend Setup
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+### Create `.env.local` file
+
+```
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_key
+CLERK_SECRET_KEY=your_secret
+NEXT_PUBLIC_API_URL=http://localhost:5000
+```
+
+Run frontend:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## ⚙️ Backend Setup
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Go to backend folder:
 
-## Learn More
+```bash
+cd backend
+npm install
+```
 
-To learn more about Next.js, take a look at the following resources:
+### Create `.env` file
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+PORT=5000
+DB_USER=your_user
+DB_PASS=your_password
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Start backend:
 
-## Deploy on Vercel
+```bash
+node server.js
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🧩 Main Features
+
+## 🌟 User Side
+
+* User login/signup
+* Browse products
+* Product filtering & search
+* Add to cart
+* Cart management
+* Checkout flow
+* Order save in database
+
+---
+
+## 🛠️ Developer Side
+
+* Product CRUD (Admin)
+* Order management
+* Image upload handling
+* Protected routes
+
+---
+
+## 🖥️ Backend API Endpoints
+
+```
+POST   /product            → Add product
+GET    /products           → Get all products
+GET    /products/:id       → Get single product
+DELETE /products/:id       → Delete product
+PUT    /products/:id       → Update product
+```
+
+---
+
+## 📜 Scripts
+
+### Frontend
+
+```bash
+npm run dev
+npm run build
+npm start
+```
+
+### Backend
+
+```bash
+node server.js
+```
+
+---
+
+## 👨‍💻 Author
+
+**Zahidul Islam Mahim**
+Web Developer | Graphics Designer | Tech Enthusiast
+
+GitHub: github.com/zahidulislammahim
